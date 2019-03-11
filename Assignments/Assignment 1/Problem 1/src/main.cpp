@@ -41,7 +41,9 @@ int main()
     double g;
 
     cout << "The inventor of chess asked for 2^(64-1) grains for 64 squares." << endl
-    << "\tAs an integer: " << num_grains_int(63) << endl
+    << "The largest number of grains stored in an int are (29 squares):" << endl
+    << "\tAs an integer: " << num_grains_int(29) << endl
+    << "The largest number of grains sotred in a double are (64 squares):" << endl
     << "\tAs a double: " << num_grains_dbl(63) << endl;
 
     while(true){
