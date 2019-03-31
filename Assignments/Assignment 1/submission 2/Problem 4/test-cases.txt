@@ -1,0 +1,16 @@
+Test Cases:
+
+The intent of my code in main.cpp is to demo the Money class with minimal user input. The code creates a third
+Money object of the same currency as the first whose value is always 9.99 of that currency. This object is used to
+demonstrate adding and subtracting of like currencies. The code then multiplies and divides by preset (int and double)
+scalars 2 and 2.5 to demonstrate multiplication and division of multiple types. Finally, we attempt to add and subtract
+both monies that the user entered
+
+    Money 1             Money 2
+
+1.  q q                 q q                 ->  Money 1: "q 0"
+                                                Money 2: " 0"    - Nonsensical inputs default to currency: " " and value: 0
+2.  USD 100.045         EUR 42.549          ->  Money 1: "USD 100.05"
+                                                Money 2: "EUR 42.54" - Different currencies lead to addition/subtraction errors
+3. $ 100.999999         $ 100.111111        ->  Money 1: "$ 101"
+                                                Money 2: "$ 100.11"  - Same currencies lead to addition/subtraction values

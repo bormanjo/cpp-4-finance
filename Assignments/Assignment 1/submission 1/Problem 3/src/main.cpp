@@ -9,7 +9,8 @@ random_device r;
 default_random_engine generator(r());
 //-----------------------------------------------------------------
 
-template <class T> class RandomVector {
+template <class T>
+class RandomVector {
     vector<T> x;
 public:
     explicit RandomVector(vector<T> a){

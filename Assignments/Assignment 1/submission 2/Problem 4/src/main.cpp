@@ -154,7 +154,7 @@ int main()
 
     // Create a common Money object
     Money d3(d1.currency, 9.99);
-    cout << endl << "I have created a third currency: [3] " << d3 << endl << endl;p
+    cout << endl << "I have created a third currency: [3] " << d3 << endl << endl;
 
     cout << "Adding [1] and [3]: " << d1 << " + " << d3 << " = " << d1 + d3 << endl;
 

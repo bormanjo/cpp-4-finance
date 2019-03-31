@@ -1,0 +1,3 @@
+The modifications made to swapMethod2) enhance both speed and memory usage because they swap the references instead of
+the values themselves. This means that instead of rewriting large double types, the computer is simply told to rearrange
+the pointers to the data instead of the data itself.

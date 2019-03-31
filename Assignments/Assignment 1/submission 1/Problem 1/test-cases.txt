@@ -1,0 +1,19 @@
+Test Cases:
+
+1. bad input    -> error
+2. -5000        -> error
+3. 0            -> 1 square
+4. 1            -> 1 square
+5. 2            -> 2 squares
+6. 3            -> 2 squares
+7. 4            -> 3 squares
+8. 1000         -> 10 squares
+9. 1000000      -> 20 squares
+10. 1000000000  -> 30 squares
+11. 18446700000000000000 -> 64 squares
+
+a). Change debug to 'true' to see each iteration.
+
+b). The number of grains represented by an integer, double are shown at the top of the script output. The integer becomes
+overloaded and forced to truncate a number that is too large for the number of bytes available. Hence we see that the
+value becomes negative. The double, however, has enough space to store the number.

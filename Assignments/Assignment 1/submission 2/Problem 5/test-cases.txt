@@ -1,0 +1,21 @@
+Test Cases:
+
+Test the option by varying each parameter and ensure that the price undergoes the appropriate effect
+
+Call Option:
+    Price       Strike      IRate       Vol     Time to Mat. (days) ->      Price           # Description of expected effect
+1.  100         100         0.05        0.5     30                  ->      5.9094          # Benchmark w/ normal values
+2.  100         100         0.05        0.5     1                   ->      1.0495          # Decrease T -> less likely for Price to exceed Strike -> decrease in price
+3.  100         100         0.05        0.01    30                  ->      0.4199          # Decrease Vol -> less likely for Price to exceed Strike -> decrease in price
+4.  100         100         0.01        0.5     30                  ->      5.7526          # Decrease IR -> Slightly increases the present value of the option payoff
+5.  100         1           0.05        0.5     30                  ->      99.0041         # Decrease K -> Option becomes far "in the money" -> increase in price
+6.  1           100         0.05        0.5     30                  ->      0.00000         # Decrease P -> Option becomes far "out of the money" -> drop in price
+
+Put Option:
+    Price       Strike      IRate       Vol     Time to Mat. (days) ->      Price           # Description of expected effect
+7.  100         100         0.05        0.5     30                  ->      5.4993          # Benchmark w/ normal values
+8.  100         100         0.05        0.5     1                   ->      1.0371          # Decrease T -> less likely for Price to fall below Strike -> decrease in price
+9.  100         100         0.05        0.01    30                  ->      0.9479          # Decrease Vol -> less likely for Price to fall below Strike -> decrease in price
+10. 100         100         0.01        0.5     30                  ->      5.6704          # Decrease IR -> Slightly
+11. 100         1           0.05        0.5     30                  ->      0.00000         # Decrease K -> Option becomes far "in the money" -> increase in price
+12. 1           100         0.05        0.5     30                  ->      98.589          # Decrease P -> Option becomes far "out of the money" -> drop in price

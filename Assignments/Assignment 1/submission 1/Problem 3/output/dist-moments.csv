@@ -1,0 +1,7 @@
+Distribution,Expected Value,Variance
+Coin,0.492,0.250185
+6-Sided Die,3.566,2.8525
+Biased Coin,0.737,0.194024
+Extreme Value Dist,1.58336,1.64359
+Normal,-0.0215713,0.989739
+Student-t,-0.0207255,1.14257

@@ -1,0 +1,62 @@
+Test Cases:
+
+Since this problem is not based on user input, we must validate the sample moments with the analytical forms of the
+distribution's moments. Thus the results in "output/dist-moments.csv" table should be within a reasonable range of
+the moments calculated below.
+
+1. Fair Coin:
+ - Bernoulli Distribution
+ Parameters:
+ - p = 1/2
+
+ Moments:
+ - Expected Value:  1/2     = p
+ - Variance:        1/4     = p * (1 - p)
+
+2. 6-Sided Die:
+ - Discrete Uniform Distribution
+ Parameters:
+ - a = 1
+ - b = 6
+
+ Moments:
+ - Expected Value:  3.5     = (a + b) / 2 = (1 + 6) / 2 = 7 /2
+ - Variance:        2.92    = [(b - a + 1)^2 - 1] / 12 = 35 / 12
+
+3. Biased Coin:
+ - Bernoulli Distribution
+ Parameters:
+ - p = 0.75
+
+ Moments:
+ - Expected Value:  0.75    = p
+ - Variance         0.1875  = p * (1 - p)
+
+4. Extreme Value (Type 1):
+ - Gumbel Distribution
+ Parameters:
+ - a = 1
+ - b = 1
+
+ - gamma = 0.57721 # Note that this is the Euler Mascheroini Constant
+
+ Moments:
+ - Expected Value:  1.57721 = a + (b * gamma)
+ - Variance:        1.64493 = (pi^2 / 6) * b^2
+
+5. Normal Distribution
+ Parameters:
+ - mu = 0
+ - sigma = 1
+
+ Moments:
+ - Expected Value:  0 = mu
+ - Variance:        1 = sigma
+
+6. Student-t Distribution
+ Parameters:
+  - t = 10
+
+ Moments:
+ - Expected Value:  0
+ - Variance:        1.25 = t / (t - 2) for t > 2
